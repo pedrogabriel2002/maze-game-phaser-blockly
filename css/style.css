@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background-color: #333744;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* PAGINA INICIAL */
+
+.mainbox {
+    box-shadow: 0px 0px 17px 5px #1D1F26;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F7F7FA;
+    border-radius: 12px;
+    padding: 24px;
+    width: 500px;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 7px;
+}
+
+li {
+    padding: 7px;
+}
+
+li button {
+    width: 300px;
+    font-size: 17px;
+    padding: 14px;
+    border-radius: 14px;
+    background-color: #04AA6D;
+    text-align: start;
+}
+
+/* PAGINA DO JOGO */
+
+li button:hover {
+    background-color: bisque;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+  }
+  
+.icon-bar button {
+    float: left;
+    width: 373.7px;
+    text-align: center;
+    padding: 12px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+  
+.icon-bar button:hover {
+    background-color: bisque;
+}
+  
+.active {
+    background-color: #04AA6D;
+}
+
+.popup {
+    box-sizing: border-box;
+}
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    width: 450px;
+    height: 300px;
+    border-style: solid;
+    z-index: 2;
+    text-align: left;
+    padding: 20px;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition:all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#code {
+    border-style: dashed;
+    width: 440px;
+    height: 150px;
+    overflow: auto;
+    white-space: pre-line;
+    
+}
+
+#nextStage {
+    background-color:#04AA6D;
+    font-size: 17px;
+    border-radius: 14px;
+    height: 40px;
+    visibility: hidden;
+}
+
+#repeatStage {
+    background-color:#04AA6D;
+    font-size: 17px;
+    border-radius: 14px;
+    height: 40px;
+    visibility: hidden;
+}
+
+#blocklyDiv {
+    height: 575px; 
+    width: 640px;
+    float: left;
+    margin-left: 7em;
+}
+  
+#capacity {
+    color: black;
+}

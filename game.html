@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projeto de Pesquisa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="icon-bar">
+    <button title="Voltar a página principal." onclick="location.href='index.html'"><img src="css/home.png" width="32"
+        height="32"></button>
+    <button title="Quantidade de blocos restantes."><img src="css/blocks.png" width="32" height="32"><span
+        id="capacity">
+      </span></button>
+    <button title="Mostrar o código." onclick="showCodePopUp()"><img src="css/code.png" width="32" height="32"></button>
+    <button title="Rodar o código." id="stepButton" onclick="runBlocks()" class="active"><img id="btn-img" src="css/play.png"
+        alt="Continuar o código" width="32" height="32"></button>
+  </div>
+
+  <div class="popup" id="popup-1">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="close-btn" onclick="showCodePopUp()">&times;</div>
+      <h1>Código:</h1>
+      <div id="code"></div>
+      <button id="nextStage">Próxima Fase</button><button id="repeatStage" onclick="runBlocks(true)">Repetir Fase</button>
+    </div>
+  </div>
+
+  <div class="blockly-editor">
+    <div id="blocklyDiv">
+      <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+        <block type="turnLeft"></block>
+        <block type="turnRight"></block>
+        <block type="moveForward"></block>
+        <block type="star"></block>
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+        </block>
+        <block type="logic_boolean">
+          <field name="BOOL">TRUE</field>
+        </block>
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <shadow type="math_number">
+              <field name="NUM">5</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_whileUntil">
+          <field name="MODE">WHILE</field>
+        </block>
+      </xml>
+    </div>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+  <script src="https://unpkg.com/blockly"></script>
+  <script src="scripts/custom_blocks.js"></script>
+  <script src="scripts/acorn_interpreter.js"></script>
+  <script src="scripts/blockly_interpreter.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+
+</body>
+
+</html>
